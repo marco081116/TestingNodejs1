@@ -7,7 +7,7 @@ const fileOps = async() => {
         const data = await fsPromises.readFile(path.join(__dirname, 'files', 'starter.txt'), 'utf-8') // Đọc file starter
         console.log(data) 
 
-        await fsPromises.unlink(path.join(__dirname, 'files', 'starter.txt'), data) 
+        await fsPromises.unlink(path.join(__dirname, 'files', 'starter.txt'), data) // xoá file
 
         await fsPromises.writeFile(path.join(__dirname, 'files', 'promise_write.txt'), data) // Viết qua file mới
         await fsPromises.appendFile(path.join(__dirname, 'files', 'promise_write.txt'), '\n\nHello mina !!!') // Viết thêm dữ liệu vào nữa
@@ -47,7 +47,7 @@ fileOps()
 //     if (err) throw err;
 //     console.log('Write completed !!!')
 //     // write thêm vào file 
-//     fs.appendFile(path.join(__dirname, 'files', 'end.txt'), '\n\nIm Tim !!!', (err) => {
+//     fs.appendFile(path.join(__dirname, 'files', 'end.txt'), '\n\nIm Tim !!!', (err) => { // Thêm dữ liệu vào file
 //         if (err) throw err;
 //         console.log('Append completed !!!')
 
