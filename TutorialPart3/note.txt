@@ -1,0 +1,22 @@
+{
+  "name": "tutorialpart3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "date-fns": "^2.29.3",
+    "uuid": "^9.0.0" -> dấu '^' nghĩa là version 9 thì bắt buộc, ko được lên hay xuống version (mấy cái 0.0 thì ko sao)
+    -> còn dấu '~' nghĩa là bắt buộc bản nhỏ 0.0 (phải update)
+    -> còn mỗi đâu "*" phải update liên tục
+    Để cài đúng bản: npm i uuid@8.3.1
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
