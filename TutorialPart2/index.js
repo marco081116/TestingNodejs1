@@ -1,5 +1,5 @@
 // const fs = require('fs');
-const fsPromises = require('fs').promises; // Thêm vào
+const fsPromises = require('fs').promises; // Thêm vào để giải quyết vấn đề call back hell
 const path = require('path')
 
 const fileOps = async() => {
