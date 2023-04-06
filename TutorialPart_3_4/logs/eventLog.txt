@@ -1,0 +1,2 @@
+20230406	21:00:37	030cd794-dbf5-4608-9547-73974b7c7921	Log event emitted !!!
+20230406	21:00:43	bc9cd33a-c787-4207-ba27-3f24e8aae9e3	Log event emitted !!!
