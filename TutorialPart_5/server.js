@@ -17,6 +17,16 @@ const PORT = process.env.PORT || 3500
 // -- define a port -> create a server
 const server = http.createServer((req, res) => {
     console.log(req.url, req.method)
+
+    let filePath;
+    if (req.url === '/' || req.url === 'index.html') {
+        res.statusCode = 200 // means that the server has successfully processed the request and is returning the requested data as the response (chat GPT)
+        res.setHeader('Content-type', 'text/html');
+        filePath = path.join(__dirname, 'views', 'index.html');
+        fs.readFile(path, 'utf-8', (err, data => {
+            res.end(data) // The server then sends a plain text response of "Hello World" (chat GPT)
+        }))
+    }
 })
 
 // -- chưa chạy server nên cần listen for request
