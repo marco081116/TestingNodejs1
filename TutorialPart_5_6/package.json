@@ -1,5 +1,5 @@
 {
-  "name": "tutorialpart_5",
+  "name": "tutorialpart_5_6",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "date-fns": "^2.29.3",
+    "express": "^4.18.2",
     "uuid": "^9.0.0"
   }
 }
