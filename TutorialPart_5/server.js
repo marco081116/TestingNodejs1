@@ -8,8 +8,11 @@ const fsPromises = require('fs').promises
 const logEvents = require('./logEvents');
 const EventEmiiter = require('events');
 class Emitter extends EventEmiiter { };
-// initialize object
+// -- initialize object
 const myEmitter = new Emitter();
+
+// -- add listener for the log event 
+myEmitter.on('log', (msg, fileName) => logEvents(msg, fileName));
 
 // -- address of local host 
 const PORT = process.env.PORT || 3500
@@ -17,11 +20,28 @@ const PORT = process.env.PORT || 3500
 // -- serveFile function cho `fileExists` 
 const serveFile = async (filePath, contentType, response) => {
     try {
-        const data = await fsPromises.readFile(filePath, 'utf-8');
-        response.writeHead(200, { 'Content-Type': contentType });
-        response.end(data);
+        // const data = await fsPromises.readFile(filePath, 'utf-8');
+        const rawData = await fsPromises.readFile(
+            filePath, 
+            // 'utf-8'
+            !contentType.includes('image') ? 'utf-8' : '' // add hình ảnh
+        );
+        const data = contentType === 'application/json'
+            ? JSON.parse(rawData) : rawData;
+        
+        response.writeHead(
+            // 200 // nếu false thì trả về 404 chứ ko phải 200 
+            filePath.includes('404.html') ? 404 : 200, 
+            { 'Content-Type': contentType }
+        );
+        // response.end(data);
+        response.end(
+            contentType === 'application/json' 
+                ? JSON.stringify(data) : data
+        );
     } catch(err){
         console.log(err);
+        myEmitter.emit('log', `${err.name}\t${err.message}`, 'errLog.txt');
         response.statusCode = 500;
         response.end();
     }
@@ -30,6 +50,7 @@ const serveFile = async (filePath, contentType, response) => {
 // -- define a port -> create a server
 const server = http.createServer((req, res) => {
     console.log(req.url, req.method)
+    myEmitter.emit('log', `${req.url}\t${req.method}`, 'reqLog.txt');
 
     // -- Dạng 1:
     // let filePath;
@@ -120,6 +141,5 @@ server.listen(PORT, () => console.log(
 ))
 
 
-// add listener for the log event 
-// myEmitter.on('log', (msg) => logEvents(msg));
-//     myEmitter.emit('log', 'Log event emitted !!!')
+
+    
