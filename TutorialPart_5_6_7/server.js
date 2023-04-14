@@ -5,10 +5,24 @@ const app = express();
 // -- include some common core modules
 const path = require('path')
 
+// -- part 7
+// const logEvents = require('./middleware/logEvents');
+const { logger } = require('./middleware/logEvents'); 
+        // tạo hàm ảo bên logEvent nên là đổi thành vậy.
+        // Từ đó bên dưới chỉ cần app.use(logger)
 // -- address of local host 
 const PORT = process.env.PORT || 3500
 
 // -- part 7
+
+// custom middleware logger
+// app.use((req, res, next) => {
+//     logEvents(`${req.method}\t${req.headers.origin}\t${req.url}`, 'reqLog.txt')
+//     console.log(`${req.method} ${req.path}`)
+//     next()
+// })
+
+app.use(logger)
 
 // -- custom middleware
 // built-in middleware to handle urlencoded data
