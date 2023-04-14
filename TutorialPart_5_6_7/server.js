@@ -8,7 +8,21 @@ const path = require('path')
 // -- address of local host 
 const PORT = process.env.PORT || 3500
 
-// -- 
+// -- part 7
+
+// -- custom middleware
+// built-in middleware to handle urlencoded data
+// in other words, form data:  
+// ‘content-type: application/x-www-form-urlencoded’
+app.use(express.urlencoded({ extended: false }));
+
+// built-in middleware for json 
+app.use(express.json());
+
+//serve static files
+app.use(express.static(path.join(__dirname, '/public')));
+
+// --
 app.get('^/$|/index(.html)?', (req, res) => { 
             // '^' => phải bắt đầu với /; '$' => phải kết thúc với /; '|' => toán tử OR 
             // (.html)?  là optional
