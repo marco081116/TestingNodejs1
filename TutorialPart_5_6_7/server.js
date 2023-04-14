@@ -111,6 +111,15 @@ app.get('/chain(.html)?', [one, two, three])
 Chỗ này chúng ta cần phân biệt: app.use and app.all:
     app.use: sử dụng cho middleware và ko chấp nhận regex
     app.all: sử dụng nhiều cho routing và nó apply cho tất cả htpp methods cùng 1 lúc
+
+middleware functions. However, there are some differences between the two:
+
+    app.use() is used to specify middleware functions that will be executed for every HTTP request that matches the path or any subpath. 
+    For example, app.use('/api', someMiddleware) will execute someMiddleware for every request that starts with '/api'. 
+    app.use() is also commonly used for handling error middleware.
+
+    app.all() is used to specify middleware functions that will be executed for any HTTP request method (GET, POST, PUT, DELETE, etc.) that matches the path. 
+    For example, app.all('/users', someMiddleware) will execute someMiddleware for every request that matches the '/users' path, regardless of the HTTP request method used.
 */
 app.all('/*', (req, res) => { // sửa từ get thành all
     // res.sendFile(path.join(__dirname, 'views', '404.html')) // status vẫn 200, ko phải 404 lỗi thật nên cần phải custom lại
