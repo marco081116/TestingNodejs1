@@ -1,4 +1,9 @@
-   20230414	14:36:20	89f293f8-57e7-4906-afe7-dcb98ff0cdc9	GET	undefined	/
-20230414	14:36:20	f9427e4f-b176-45a2-a383-0d8ea0653297	GET	undefined	/css/style.css
-20230414	14:40:31	3c67048a-cbd7-4b99-ae6a-af26c44290e6	GET	undefined	/
-20230414	14:40:31	0b463b49-36c7-4224-a23f-47e1bd2b7853	GET	undefined	/css/style.css
+20230414	15:36:34	9ca3d2e1-4459-4de6-9550-eacbb961db4b	GET	undefined	/
+20230414	15:36:34	7d45249c-3c38-46ef-b02f-0ad56c060e41	GET	undefined	/css/style.css
+20230414	15:37:03	9c057297-7eff-472b-ae6d-6d7f3ed8789d	GET	undefined	/
+20230414	15:37:28	8d83e30f-a4b9-4b6e-9174-59fefd93443b	GET	undefined	/
+20230414	15:37:28	870a2028-152e-4672-b28b-d84de03c1bc4	GET	undefined	/css/style.css
+20230414	15:38:12	ead1ee09-d488-4dff-86c8-c9e61dac8308	GET	undefined	/marco
+20230414	15:38:12	5e1ca720-e644-4f78-9f41-8380c1bf7d82	GET	undefined	/css/style.css
+20230414	15:39:39	460e0003-cd21-47d6-aa81-48a56ff6ada5	GET	undefined	/marco
+20230414	15:39:39	36d4ed7f-00ef-460e-8307-9f6fb3429039	GET	undefined	/css/style.css

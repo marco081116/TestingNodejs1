@@ -1,0 +1,1 @@
+20230414	15:37:03	86e47f85-cb5d-480a-96a9-2b6abb2a987d	Error: Not allowed by CORS !!!
