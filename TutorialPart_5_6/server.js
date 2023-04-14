@@ -35,8 +35,28 @@ app.get('/hello(.html)?', (req, res, next) => {
     next()
 }, (req, res) => {
     res.send('Hello world !!!')
-    console.log('Test load data')
 })
+
+//  -- chaining route handlers
+
+const one = (req, res, next) => {
+    console.log('one')
+    next()
+}
+
+const two = (req, res, next) => {
+    console.log('two')
+    next()
+}
+
+const three = (req, res) => {
+    console.log('three')
+    res.send('Finished !!!!')
+}
+
+app.get('/chain(.html)?', [one, two, three])
+
+// --
 
 app.get('/*', (req, res) => {
     // res.sendFile(path.join(__dirname, 'views', '404.html')) // status vẫn 200, ko phải 404 lỗi thật nên cần phải custom lại
