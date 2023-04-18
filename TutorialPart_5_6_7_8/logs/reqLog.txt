@@ -12,3 +12,17 @@
 20230418	23:13:54	e7c3be38-aabb-455d-8642-4bac9b8932e9	GET	undefined	/favicon.ico
 20230418	23:13:56	edfd664f-2d66-428b-bed9-4a2c2d6fe6ff	GET	undefined	/
 20230418	23:13:56	a8dc4517-8922-4338-8611-5446e539b211	GET	undefined	/css/style.css
+20230418	23:33:52	3abc21d3-fef3-4480-aa9e-5e88dc9a658c	GET	undefined	/subdir
+20230418	23:35:50	4b819c4e-e13a-4eda-8531-c2c64e9df18a	GET	undefined	/subdir
+20230418	23:36:11	1e52d29f-326c-451c-b6b9-a0a8ac0cb1f9	GET	undefined	/subdir/test.html
+20230418	23:38:22	7de6aa48-bf3c-4db4-8980-e5e4bdb4fbfc	GET	undefined	/subdir/gay.html
+20230418	23:38:22	4b842ee0-3f42-4c1a-ab24-00cfef80ba51	GET	undefined	/subdir/css/style.css
+20230418	23:45:48	078a8e8a-e717-43d3-ac8b-5466a7f52c9a	GET	undefined	/subdir/gay.html
+20230418	23:45:48	d2d95930-75de-4dc0-89c0-7a35ab190dfc	GET	undefined	/subdir/css/style.css
+20230418	23:45:54	d6281547-b3f6-4ef2-bb65-5abf1703a3df	GET	undefined	/
+20230418	23:45:54	5bff761f-9135-4a22-92d5-a6dcc407d304	GET	undefined	/css/style.css
+20230418	23:45:59	9e2f5cbc-4624-4d0c-b782-b8478d603dea	GET	undefined	/new-page.html
+20230418	23:45:59	e2c1f825-7d21-49c2-9e7e-f251fe839f02	GET	undefined	/css/style.css
+20230418	23:45:59	21f12503-8d46-4402-aaac-50cfeadf80f2	GET	undefined	/img/img1.jpg
+20230418	23:46:10	600035c0-c41a-4ced-9e49-12085d2e6d9c	GET	undefined	/index
+20230418	23:46:10	5cef0cd5-4aa5-439f-9d71-cb7cfe708ea1	GET	undefined	/css/style.css

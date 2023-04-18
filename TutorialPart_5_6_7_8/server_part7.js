@@ -53,18 +53,74 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 //serve static files
-// app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, '/public')));
 
-// -- part 8
-app.use('/', express.static(path.join(__dirname, '/public')));
-app.use('/subdir', express.static(path.join(__dirname, '/public'))); // nếu page ko tồn tại lỗi thì đưa 404 cho subdir xài bth
+// --
+app.get('^/$|/index(.html)?', (req, res) => { 
+            // '^' => phải bắt đầu với /; '$' => phải kết thúc với /; '|' => toán tử OR 
+            // (.html)?  là optional
+    // res.send('Hello !!!');
+    // -- chuyền file vào
+    // -- cách  1:
+    // res.sendFile('./views/index.html', { root: __dirname })
+    // -- cách 2:
+    res.sendFile(path.join(__dirname, 'views', 'index.html'))
+})
 
-// -- part 8
+app.get('/new-page(.html)?', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'new-page.html'))
+}) 
 
-app.use('/', require('./routes/root')) 
-app.use('/subdir', require('./routes/subdir')) 
-app.use('/employees', require('./routes/api/employees.js')) 
+app.get('/old-page(.html)?', (req, res) => {
+    res.redirect(301, '/new-page.html') // chuyển old thành new mãi mãi
+}) 
 
+// -- route handlers
+
+app.get('/hello(.html)?', (req, res, next) => {
+    console.log('attempted to load hello.html');
+    next()
+}, (req, res) => {
+    res.send('Hello world !!!')
+})
+
+//  -- chaining route handlers
+
+const one = (req, res, next) => {
+    console.log('one')
+    next()
+}
+
+const two = (req, res, next) => {
+    console.log('two')
+    next()
+}
+
+const three = (req, res) => {
+    console.log('three')
+    res.send('Finished !!!!')
+}
+
+app.get('/chain(.html)?', [one, two, three])
+
+
+
+// --
+
+/*
+Chỗ này chúng ta cần phân biệt: app.use and app.all:
+    app.use: sử dụng cho middleware và ko chấp nhận regex
+    app.all: sử dụng nhiều cho routing và nó apply cho tất cả htpp methods cùng 1 lúc
+
+middleware functions. However, there are some differences between the two:
+
+    app.use() is used to specify middleware functions that will be executed for every HTTP request that matches the path or any subpath. 
+    For example, app.use('/api', someMiddleware) will execute someMiddleware for every request that starts with '/api'. 
+    app.use() is also commonly used for handling error middleware.
+
+    app.all() is used to specify middleware functions that will be executed for any HTTP request method (GET, POST, PUT, DELETE, etc.) that matches the path. 
+    For example, app.all('/users', someMiddleware) will execute someMiddleware for every request that matches the '/users' path, regardless of the HTTP request method used.
+*/
 app.all('/*', (req, res) => { // sửa từ get thành all
     // res.sendFile(path.join(__dirname, 'views', '404.html')) // status vẫn 200, ko phải 404 lỗi thật nên cần phải custom lại
     // res.status(404).sendFile(path.join(__dirname, 'views', '404.html'))

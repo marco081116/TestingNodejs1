@@ -1,1 +1,2 @@
 20230414	15:37:03	86e47f85-cb5d-480a-96a9-2b6abb2a987d	Error: Not allowed by CORS !!!
+20230418	23:33:52	97baa3f6-9a0d-4a07-8068-7092a18e1a1d	Error: ENOENT: no such file or directory, stat '/Users/marconguyen0802/CODE/Node js/Testing1/TutorialPart_5_6_7_8/views/surdir/index.html'
