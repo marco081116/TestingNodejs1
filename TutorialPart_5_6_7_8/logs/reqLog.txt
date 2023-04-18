@@ -7,3 +7,8 @@
 20230414	15:38:12	5e1ca720-e644-4f78-9f41-8380c1bf7d82	GET	undefined	/css/style.css
 20230414	15:39:39	460e0003-cd21-47d6-aa81-48a56ff6ada5	GET	undefined	/marco
 20230414	15:39:39	36d4ed7f-00ef-460e-8307-9f6fb3429039	GET	undefined	/css/style.css
+20230418	23:13:54	d1172807-9b8a-4a41-9feb-a6d79bbc8d3d	GET	undefined	/marco
+20230418	23:13:54	c4602d3c-f207-4944-b608-28ccdae1a556	GET	undefined	/css/style.css
+20230418	23:13:54	e7c3be38-aabb-455d-8642-4bac9b8932e9	GET	undefined	/favicon.ico
+20230418	23:13:56	edfd664f-2d66-428b-bed9-4a2c2d6fe6ff	GET	undefined	/
+20230418	23:13:56	a8dc4517-8922-4338-8611-5446e539b211	GET	undefined	/css/style.css
