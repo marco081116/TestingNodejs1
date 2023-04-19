@@ -8,3 +8,4 @@
 20230419	15:15:05	f5275212-0d9d-4bdc-bdcd-81d7a0ad27b3	ReferenceError: parse is not defined
 20230419	15:15:05	a80b9470-d967-4dfb-b552-af9b9aa33898	ReferenceError: parse is not defined
 20230419	15:15:06	d19fe3a5-7ddb-4cf9-be89-a2d99262aea3	ReferenceError: parse is not defined
+20230420	00:28:25	eda8fccc-c0ed-4514-a7a3-7221c9e4342f	SyntaxError: Unexpected token p in JSON at position 18

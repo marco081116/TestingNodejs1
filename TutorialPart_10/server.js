@@ -56,6 +56,7 @@ app.use('/', express.static(path.join(__dirname, '/public')));
 app.use('/', require('./routes/root')) // -- part 8
 // -- part 10
 app.use('/register', require('./routes/register'))
+app.use('/auth', require('./routes/auth'))
 app.use('/employees', require('./routes/api/employees')) // -- part 8
 
 
