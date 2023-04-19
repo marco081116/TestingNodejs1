@@ -50,12 +50,14 @@ app.use('/', express.static(path.join(__dirname, '/public')));
 // app.use('/subdir', express.static(path.join(__dirname, '/public'))); 
     // nếu page ko tồn tại lỗi thì đưa 404 cho subdir xài bth
     // không cần xài nữa
-    
-// -- part 8
-// -- routes
-app.use('/', require('./routes/root')) 
-// app.use('/subdir', require('./routes/subdir')) 
-app.use('/employees', require('./routes/api/employees')) 
+   
+// -- ROUTES
+
+app.use('/', require('./routes/root')) // -- part 8
+// -- part 10
+app.use('/register', require('./routes/register'))
+app.use('/employees', require('./routes/api/employees')) // -- part 8
+
 
 app.all('/*', (req, res) => { // sửa từ get thành all
     // res.sendFile(path.join(__dirname, 'views', '404.html')) // status vẫn 200, ko phải 404 lỗi thật nên cần phải custom lại
