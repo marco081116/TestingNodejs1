@@ -6,7 +6,7 @@
 // -- Thay đổi !!!
 
 const data = {
-    employees: require('../../model/employees.json'),
+    employees: require('../model/employees.json'),
     setEmployees: function(data) {
         this.employees = data
     } 
@@ -56,7 +56,7 @@ const updateEmployee = (req, res) => {
     }
 
     const filterArray = data.employees.filter(
-        emid => emid.id !== parse(req.body.id)
+        emid => emid.id !== parseInt(req.body.id)
     )
     const unsortedArray = [...filterArray, employee]
     data.setEmployees(unsortedArray.sort((a,b) => 
@@ -75,7 +75,7 @@ const deleteEmployee = (req, res) => {
     }
 
     const filterArray = data.employees.filter(
-        emid => emid.id !== parse(req.body.id)
+        emid => emid.id !== parseInt(req.body.id)
     )
     data.setEmployees([...filterArray])
     res.json(data.employees)
