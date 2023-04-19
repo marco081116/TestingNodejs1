@@ -64,7 +64,7 @@ app.use('/subdir', express.static(path.join(__dirname, '/public'))); // nếu pa
 // -- routes
 app.use('/', require('./routes/root')) 
 app.use('/subdir', require('./routes/subdir')) 
-app.use('/employees', require('./routes/api/employees')) 
+app.use('/employees', require('./routes/api/employees_part8')) 
 
 app.all('/*', (req, res) => { // sửa từ get thành all
     // res.sendFile(path.join(__dirname, 'views', '404.html')) // status vẫn 200, ko phải 404 lỗi thật nên cần phải custom lại
