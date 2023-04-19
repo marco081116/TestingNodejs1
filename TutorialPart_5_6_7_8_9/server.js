@@ -7,6 +7,8 @@ const path = require('path')
 
 // -- part 7
 const cors = require('cors')
+// -- part 9 
+const corsOptions = require('./config/corsOptions')
 // const logEvents = require('./middleware/logEvents');
 const { logger } = require('./middleware/logEvents');  // để logger trong {} vì logEvents có 2 functions
 const errorHandler = require('./middleware/errorHandler'); 
@@ -26,21 +28,8 @@ const PORT = process.env.PORT || 3500
 
 app.use(logger)
 
-// -- Cross Origin Resource Sharing
-const whitelist = ['https://www.yoursite.com', 'http://127.0.0.1:5500', 'http://localhost:3500']; 
-        // allow to access backend*
-        // https://www.yoursite.com => cái link để thực hiện
-// -- functions allow cors to do this*
-const corsOptions = {
-    origin: (origin, callback) => {
-        if (whitelist.indexOf(origin) !== -1 || !origin) {
-            callback(null, true)
-        } else {
-            callback(new Error('Not allowed by CORS !!!'));
-        }
-    },
-    optionsSuccessStatus: 200
-}
+// -- Cross Origin Resource Sharing => Đã cắt code ra
+
 app.use(cors(corsOptions))
 
 // -- custom middleware
@@ -58,12 +47,14 @@ app.use(express.json());
 // -- part 8
 // -- serve static file
 app.use('/', express.static(path.join(__dirname, '/public')));
-app.use('/subdir', express.static(path.join(__dirname, '/public'))); // nếu page ko tồn tại lỗi thì đưa 404 cho subdir xài bth
-
+// app.use('/subdir', express.static(path.join(__dirname, '/public'))); 
+    // nếu page ko tồn tại lỗi thì đưa 404 cho subdir xài bth
+    // không cần xài nữa
+    
 // -- part 8
 // -- routes
 app.use('/', require('./routes/root')) 
-app.use('/subdir', require('./routes/subdir')) 
+// app.use('/subdir', require('./routes/subdir')) 
 app.use('/employees', require('./routes/api/employees_part8')) 
 
 app.all('/*', (req, res) => { // sửa từ get thành all

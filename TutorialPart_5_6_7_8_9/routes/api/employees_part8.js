@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const data = {}
 
-data.employees = require('../../data/employees.json') // can apply with your database technology => now simple
+data.employees = require('../../model/employees.json') // can apply with your database technology => now simple
 
 router.route('/')
     .get((req, res) => {
