@@ -1,8 +1,8 @@
 // -- part 10
-const userDB = {
+const usersDB = {
     users: require('../model/users.json'),
     setUsers: function(data) {
-        this.Users = data
+        this.users = data
     }
 }
 
@@ -16,7 +16,7 @@ const handleNewUser = async (req,res) => {
         return res.status(400).join({'message': 'Username and password are required !!!'})
     }
     // -- check for dulicates in the database:
-    const dulicate = UsersDB.users.find(
+    const dulicate = usersDB.users.find(
         person => person.username === user
     )
     if (dulicate) {
@@ -35,13 +35,13 @@ const handleNewUser = async (req,res) => {
             "username": user,
             "password": hashedPwd,
         }
-        userDB.setUsers([...userDB.users, newUser])
+        usersDB.setUsers([...usersDB.users, newUser])
         await fsPromises.writeFile(
             path.join(__dirname, '..', 'model', 'users.json'), // -- overwrite the existing file
-            JSON.stringify(UsersDB.users), // specify the data type we gonna send
-            console.log(UsersDB.users),
-            res.status(201).json({'message': `new user ${user} created !!!`})
+            JSON.stringify(usersDB.users), // specify the data type we gonna send
         )
+        console.log(usersDB.users)
+        res.status(201).json({'message': `new user ${user} created !!!`})
     } catch (err) {
         res.status(500).join({'message': err.message})
     }

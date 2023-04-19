@@ -74,3 +74,15 @@
 20230419	15:15:06	c656bd22-a126-4623-bd00-92821d992ee0	PUT	undefined	/employees
 20230419	15:18:00	5658a128-08f2-49cb-8238-649e9e5e2c61	POST	undefined	/employees
 20230419	15:18:10	ee43d1e9-1fe6-495c-80ee-7aa565f89b66	PUT	undefined	/employees
+20230419	17:05:01	ff627bf1-348f-40da-b1e1-3cee3e5aa528	GET	undefined	/employees
+20230419	17:05:09	6ddd7ac7-0b15-4ed3-9c8d-cfcd193fe91e	GET	undefined	/register
+20230419	17:05:09	fc388696-6361-49f9-b3f3-5b25590b98c8	GET	undefined	/css/style.css
+20230419	17:09:14	9210eaa6-1420-41f4-9f74-12a0a9f80a2e	POST	undefined	/register
+20230419	17:09:39	958bb382-ec3e-48c4-9a32-5c6f46f16b35	POST	undefined	/register
+20230419	17:10:40	64427de2-8a9c-426f-8c08-7ae855588182	POST	undefined	/register
+20230419	17:11:11	06ec6e0c-a057-49f5-b614-87d96d201b62	POST	undefined	/register
+20230419	17:11:44	16c434c6-895f-4d3c-88fe-1ce5746aebe6	POST	undefined	/register
+20230419	17:13:12	bb3f3e49-489c-43ba-8c78-6a03c1216ab5	POST	undefined	/register
+20230419	17:13:30	bd191a16-a716-45a4-b5be-b382bec96364	POST	undefined	/register
+20230419	17:14:10	2bd69b98-db4f-4266-8426-54e9d2f92b60	POST	undefined	/register
+20230419	17:14:41	524debdb-48e3-4ded-a165-2ce73b43b90d	POST	undefined	/register
