@@ -47,10 +47,10 @@ const handleLogin = async (req, res) => {
         const otherUsers = usersDB.users.filter(
             person => person.username !== foundUser.username
         )
-        const currentUser = { ...foundUser,refreshToken}
+        const currentUser = { ...foundUser, refreshToken}
         usersDB.setUsers([...otherUsers, currentUser])
         await fsPromises.writeFile(
-            path.join(__dirname, '..', 'model', 'user.json'),
+            path.join(__dirname, '..', 'model', 'users.json'),
             JSON.stringify(usersDB.users)
         )
         //  cookie có thể bị gây hại trong JS, nhưng với dạng http thì khác

@@ -17,4 +17,3 @@ router.route('/:id')
     .get(employeeController.getEmployee)
 
 module.exports = router
-

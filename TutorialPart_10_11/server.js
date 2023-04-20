@@ -14,6 +14,9 @@ const { logger } = require('./middleware/logEvents');  // để logger trong {} 
 const errorHandler = require('./middleware/errorHandler'); 
         // tạo hàm ảo bên logEvent nên là đổi thành vậy.
         // Từ đó bên dưới chỉ cần app.use(logger)
+
+// -- part 10
+// const verifyJWT = require('./middleware/verifyJWT');
 // -- address of local host 
 const PORT = process.env.PORT || 3500
 
@@ -57,6 +60,8 @@ app.use('/', require('./routes/root')) // -- part 8
 // -- part 10
 app.use('/register', require('./routes/register'))
 app.use('/auth', require('./routes/auth'))
+// app.use(verifyJWT);
+// -- 
 app.use('/employees', require('./routes/api/employees')) // -- part 8
 
 
