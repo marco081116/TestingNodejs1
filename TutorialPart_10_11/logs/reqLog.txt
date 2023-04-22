@@ -35,3 +35,13 @@
 20230422	14:24:07	5555bee4-e18e-47be-b271-0cec62c9593a	GET	undefined	/employees
 20230422	14:24:08	a8afa3ef-e960-4ef0-8fb0-27c058b2edce	GET	undefined	/employees
 20230422	14:24:11	322ea6b1-89b8-4838-93fe-fdc140856839	GET	undefined	/employees
+20230422	15:38:16	71a992a6-0f39-400c-83f1-4710719e6647	POST	undefined	/auth
+20230422	15:38:19	4d35bd38-7817-4f22-aebe-88ead0a2a4f0	GET	undefined	/refresh
+20230422	15:38:20	3398dfe1-43ce-436d-9d0e-f38168c0dfe3	GET	undefined	/refresh
+20230422	15:38:21	857efbb6-f1b4-4d09-b7bb-7e19c977c914	GET	undefined	/refresh
+20230422	15:38:21	d3e56cb4-6fd1-4461-9ffd-583fa2332ba7	GET	undefined	/refresh
+20230422	15:38:21	a0abdd00-5bd6-41dc-9c16-18f175dfd65f	GET	undefined	/refresh
+20230422	15:38:21	a46f901f-472c-4d1b-9fd1-814cf76eed11	GET	undefined	/refresh
+20230422	15:38:22	7876f5cf-25dc-49a5-9447-15f870be736d	GET	undefined	/refresh
+20230422	15:38:22	8b20657c-5d1d-4f91-8529-8f82d17a8288	GET	undefined	/refresh
+20230422	15:38:22	4b5a0150-4a6d-414f-a363-772dd31664b4	GET	undefined	/refresh

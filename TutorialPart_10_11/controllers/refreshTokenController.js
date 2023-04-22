@@ -10,8 +10,6 @@ const { json } = require('express')
 const jwt = require('jsonwebtoken')
 require('dotenv').config()
 
-// -- part 10
-
 const handleRefreshToken = (req, res) => {
     const cookies = req.cookies
     if (!cookies?.jwt) { // check xem có cookie ko? nếu có thì có jwt chưa ?
