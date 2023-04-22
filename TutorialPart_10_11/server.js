@@ -15,6 +15,10 @@ const errorHandler = require('./middleware/errorHandler');
         // tạo hàm ảo bên logEvent nên là đổi thành vậy.
         // Từ đó bên dưới chỉ cần app.use(logger)
 
+// -- part 11
+const verifyJWT = require('./middleware/verifyJWT')
+const cookieParser = require('cookie-parser')
+
 // -- part 10
 // const verifyJWT = require('./middleware/verifyJWT');
 // -- address of local host 
@@ -47,6 +51,9 @@ app.use(express.json());
 //serve static files
 // app.use(express.static(path.join(__dirname, '/public')));
 
+// -- middleware for cookie
+app.use(cookieParser())
+
 // -- part 8
 // -- serve static file
 app.use('/', express.static(path.join(__dirname, '/public')));
@@ -60,8 +67,11 @@ app.use('/', require('./routes/root')) // -- part 8
 // -- part 10
 app.use('/register', require('./routes/register'))
 app.use('/auth', require('./routes/auth'))
-// app.use(verifyJWT);
-// -- 
+
+// -- part 11
+app.use(verifyJWT); // xài cho mỗi employees
+
+// -- part 10
 app.use('/employees', require('./routes/api/employees')) // -- part 8
 
 
