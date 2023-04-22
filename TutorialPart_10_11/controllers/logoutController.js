@@ -41,4 +41,4 @@ const handleLogout = async (req, res) => {
         // means not content to send back
 }
 
-module.exports = { handleRefreshToken }
+module.exports = { handleLogout }
