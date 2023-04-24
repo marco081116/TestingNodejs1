@@ -54,7 +54,7 @@ const handleLogin = async (req, res) => {
             JSON.stringify(usersDB.users)
         )
         //  cookie có thể bị gây hại trong JS, nhưng với dạng http thì khác
-        res.cookie('jwt', refreshToken, { httpOnly: true, maxAge: 24 * 60 * 60 * 1000 }) 
+        res.cookie('jwt', refreshToken, { httpOnly: true, sameSite: 'None', secure: true, maxAge: 24 * 60 * 60 * 1000 }) 
             // lưu theo millisecond
         res.json({ accessToken })
         // -- part 10 

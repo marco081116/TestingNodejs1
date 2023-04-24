@@ -17,7 +17,8 @@ const errorHandler = require('./middleware/errorHandler');
 
 // -- part 11
 const verifyJWT = require('./middleware/verifyJWT')
-const cookieParser = require('cookie-parser')
+const cookieParser = require('cookie-parser');
+const credentials = require('./middleware/credentials');
 
 // -- part 10
 // const verifyJWT = require('./middleware/verifyJWT');
@@ -34,6 +35,11 @@ const PORT = process.env.PORT || 3500
 // })
 
 app.use(logger)
+
+// -- part 11
+// handle options credentials check - before CORS !!!
+// and fetch cookies credentials requirement
+app.use(credentials)
 
 // -- Cross Origin Resource Sharing => Đã cắt code ra
 
