@@ -1,0 +1,18 @@
+AUTHENTICATION: the process of verifying who someone is
+    Authentication is the process of verifying the identity of a user or system. 
+    It involves confirming that the user is who they claim to be by asking for some form of identification, such as a username and password, a smart card, a fingerprint, or other biometric data. 
+    Authentication is the first step in gaining access to a resource and helps ensure that only authorized users are granted access.
+
+AUTHORIZATION: the process of verify what resourceces a user has access to.
+    Authorization is the process of determining whether a user or system is allowed to access a particular resource or perform a certain action. 
+    Once a user has been authenticated, authorization determines the level of access they are granted. 
+    This can include things like read-only access, write access, or full administrative privileges. 
+    Authorization helps ensure that users are only able to access the resources they are authorized to use.
+
+JWT (JSON Web Tokens):
+    Confirm authentication
+    Allow access to API andpoints
+    Endpoints provide data resources
+    User authorization header
+
+This part we will expand the authorization 
