@@ -81,3 +81,5 @@
 20230423	02:18:14	421f05c3-f270-4bbe-a00f-23db6aa0c98a	GET	undefined	/refresh
 20230423	02:18:14	d6e091f5-e7b7-4d81-9e53-dfb2f482c5ea	GET	undefined	/refresh
 20230423	02:18:16	d789b7b1-8e88-4bbd-b8f8-3c98cda1cdeb	GET	undefined	/refresh
+20230424	15:16:43	d643b5ba-f8f7-4d33-88a4-131e63d0e0c7	GET	undefined	/register
+20230424	15:16:43	784537ef-747f-49eb-8a97-116d2cbb1ab1	GET	undefined	/favicon.ico
