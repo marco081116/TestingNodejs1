@@ -1,4 +1,4 @@
-const allowedOrigins = require('./allowOrigins')
+const allowedOrigins = require('./allowedOrigins')
         // allow to access backend*
         // https://www.yoursite.com => cái link để thực hiện
 // -- functions allow cors to do this*
