@@ -6,12 +6,12 @@ const verifyRoles = (...allowedRoles) => { // Chỗ này ta cho truyền vào nh
         const rolesArray = [...allowedRoles]
         console.log(rolesArray)
         console.log(req.roles)
-        const res = req.roles.map(
+        const result = req.roles.map(
             role => rolesArray.includes(role)
         ).find(
             val => val === true
         )
-        if (!res) {
+        if (!result) {
             return res.sendStatus(401)
         }
         next()

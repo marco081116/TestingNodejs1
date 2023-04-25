@@ -83,3 +83,17 @@
 20230423	02:18:16	d789b7b1-8e88-4bbd-b8f8-3c98cda1cdeb	GET	undefined	/refresh
 20230424	15:16:43	d643b5ba-f8f7-4d33-88a4-131e63d0e0c7	GET	undefined	/register
 20230424	15:16:43	784537ef-747f-49eb-8a97-116d2cbb1ab1	GET	undefined	/favicon.ico
+20230425	14:44:12	37182008-3987-4d3a-9627-4879e0a9a6fb	POST	undefined	/auth
+20230425	14:44:16	a28f19e4-431b-408e-a959-39ef42558584	POST	undefined	/auth
+20230425	14:44:22	e73eba97-c585-4b5f-90e9-d0a517857056	POST	undefined	/auth
+20230425	14:44:24	037efdc3-d4dd-48bc-b9f3-bbf359aea8e0	POST	undefined	/auth
+20230425	14:44:59	5a03ec8c-f9e2-44cd-a6cf-85063dae179c	POST	undefined	/auth
+20230425	14:52:13	8713ea1d-8ef9-4598-a93a-765e8994e9de	POST	undefined	/auth
+20230425	14:52:25	a41ee469-1d99-44c6-99be-e3a45bff9a31	GET	undefined	/employees
+20230425	14:52:57	95164d2c-09b8-40ca-8d57-fe9c355fd5a1	POST	undefined	/employees
+20230425	14:52:59	57ad84e1-52f1-4543-8e19-9199333a1a62	POST	undefined	/auth
+20230425	14:53:05	2b3135a4-40b7-4f71-bd2f-02fb375faaef	POST	undefined	/employees
+20230425	14:53:11	c4cbaad5-6ca8-4e2a-b5e6-4ed68285505d	POST	undefined	/auth
+20230425	14:53:23	867e21f5-83ec-4d3d-98b3-cc17b56b9183	POST	undefined	/employees
+20230425	14:53:47	75aba422-7eb0-4eab-9a27-38f9f455b85e	POST	undefined	/auth
+20230425	14:53:54	b29205c7-e23d-4e8c-b95c-c8072deab703	POST	undefined	/employees
