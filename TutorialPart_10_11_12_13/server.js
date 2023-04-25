@@ -1,3 +1,5 @@
+// -- part 13
+require('dotenv').config() // khai báo trên này đỡ phải khai báo
 // -- part 6
 const express = require('express'); // framework của node js
 const app = express();
