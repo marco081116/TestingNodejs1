@@ -31,9 +31,16 @@ const handleLogin = async (req, res) => {
     const match = await bcrypt.compare(pwd, foundUser.password)
 
     if (match) {
+        // -- part 12
+        const roles = Object.values(foundUser.roles)
         // -- part 11
         const accessToken = jwt.sign(
-            { "username": foundUser.username },
+            { 
+                "UserInfo": { // check more JWT claims
+                    "username": foundUser.username,
+                    "roles": roles
+                }
+            },
             process.env.ACCESS_TOKEN_SECRET,
             { expiresIn: '30s' } // Thường là 10mins 15mins, trong này chỉ làm 30s để thấy được
         )
