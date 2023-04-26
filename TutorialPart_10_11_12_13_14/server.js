@@ -28,7 +28,15 @@ const credentials = require('./middleware/credentials');
 
 // -- part 13
 const mongoose = require('mongoose')
+const connectDB = require('./config/dbConnect')
+
+// --
 const PORT = process.env.PORT || 3500
+
+// -- part 13
+// connect to mongoDB
+connectDB()
+
 
 // -- part 7
 
@@ -110,7 +118,14 @@ app.all('/*', (req, res) => { // sửa từ get thành all
 
 app.use(errorHandler) // => Đã code file errorHandler
 
+mongoose.connection.once('open', () => {
+    console.log('Connected to mongoDB !!!')
+    app.listen(PORT, () => console.log(
+        `Server runs on PORT ${PORT}`
+    ))    
+})
+
 // -- chưa chạy server nên cần listen for request
-app.listen(PORT, () => console.log(
-    `Server runs on PORT ${PORT}`
-))    
+// app.listen(PORT, () => console.log(
+//     `Server runs on PORT ${PORT}`
+// ))    
