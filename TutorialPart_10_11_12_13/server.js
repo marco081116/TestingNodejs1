@@ -25,6 +25,9 @@ const credentials = require('./middleware/credentials');
 // -- part 10
 // const verifyJWT = require('./middleware/verifyJWT');
 // -- address of local host 
+
+// -- part 13
+const mongoose = require('mongoose')
 const PORT = process.env.PORT || 3500
 
 // -- part 7
