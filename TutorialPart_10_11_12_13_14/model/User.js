@@ -1,3 +1,5 @@
+// -- part 14
+
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
  
@@ -23,4 +25,4 @@ const userSchema = new Schema({
     }
 })
 
-module.exports = mongoose.model('User', employeeSchema)
+module.exports = mongoose.model('User', userSchema)
