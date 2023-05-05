@@ -18,19 +18,20 @@ const bcrypt = require('bcrypt')
 const handleNewUser = async (req,res) => {
     const { user, pwd } = req.body
     if (!user || !pwd) {
-        return res.status(400).join({'message': 'Username and password are required !!!'})
+        return res.status(400).json({'message': 'Username and password are required !!!'})
     }
 
     // -- check for dulicates in the database:
     // const dulicate = usersDB.users.find(
     //     person => person.username === user
     // )
+
     // -- part 14 Do đã khai báo User khác đi nên cần update
-    const dulicate = await User.findOne({ username: user }).exec()
+    // const dulicate = await User.findOne({ username: user }).exec()
     
-    if (dulicate) {
-        return res.sendStatus(409) // -- confilct
-    }
+    // if (dulicate) {
+        // return res.sendStatus(409) // -- confilct
+    // }
     try {
         // encrypt the password
         const hashedPwd = await bcrypt.hash(pwd, 10) 
@@ -58,13 +59,13 @@ const handleNewUser = async (req,res) => {
         // -- part 14
         const result = await User.create({
             "username": user,
-            "password": hashedPwd,
+            "password": hashedPwd
         })
 
         console.log(result)
         res.status(201).json({'message': `new user ${user} created !!!`})
     } catch (err) {
-        res.status(500).join({'message': err.message})
+        res.status(500).json({'message': err.message})
     }
 }
 
